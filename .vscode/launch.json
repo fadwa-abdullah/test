@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "FastAPI Debug (Uvicorn)",
+            "type": "python",
+            "request": "launch",
+            "module": "uvicorn",
+            "args": [
+                "app:app",        // file_name:app_instance_name
+                "--reload",
+                "--host", "127.0.0.1",
+                "--port", "8000"
+            ],
+            "jinja": true,
+            "envFile": "${workspaceFolder}/.env",     // load environment variables
+            "console": "integratedTerminal",           // shows logs in VS Code terminal
+            "justMyCode": true                         // debug only your code
+        }
+    ]
+}
